@@ -9,36 +9,36 @@
 //get range for length and charset array so options display/interact right
 
 function generatePassword(){
-  var options = ["Password length" , "Character type"];
+  var options = ["uppercase" , "lowercase" , "special"];
   var length = [8-128];
-  var charset = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var charset = ["abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()"];
   var password = "";
 
-  var userChoice = window.prompt("What credentials for password?")
-  //write test conditions
-  if (userChoice.options) {
-    window.alert("You've chosen" + options + ".")
+  var userChoice = window.prompt("Choose length of password between 8-128 characters.")
+  //write test conditions for length in first userChoice question, then it displays user choice
 
-  }
-  var userChoice2 = window.prompt("Choose length of password between 8-128 characters.")
-//write test conditions
-  if (userChoice2.length) {
-    window.alert("You've chosen" + length + ".")
-  } else if (!userChoice2.charset) {
-    window.alert("Please choose again.")
-  }
+if (userChoice.length) {
+    window.alert("You've chosen" + userChoice +".")
+  } else if (!userChoice.length) {
+    window.alert("Try again!");
+  } 
 
-  var userChoice3 = window.prompt("Which character types included in password?")
-//write test conditions
-  if (userChoice3.charset) {
-    window.alert("You've chosen" + charset + ".")
-  }
+  var userChoice2 = window.prompt("Which character types included in password? ex. uppercase, lowercase, special")
+//write test conditions for user input choice2 display user choice
 
+if (userChoice2.options) {
+    window.alert("You've chosen" + userChoice2 + ".")
+  } else if (userChoice2.options[1]) {
+    window.alert("You've chosen" + userChoice2 + ".")
+  } else if (userChoice2.options[2]) {
+    window.alert("You've chosen" + userChoice2 + ".")
+  } 
 
-  for (var i = 0, n = charset.length; i<length; ++i) {
+for (var i = 0, n = charset.length; i<length; ++i) {
     password += charset.charAt(Math.floor(Math.random() * n));
   }
-  return password;
+  return password;  
+
 };
 
 //make it display
