@@ -8,38 +8,78 @@
 
 //get range for length and charset array so options display/interact right
 
+
+ // validate choice.legth within 8-128
+ // validate user input, handle extra info in else conditions-returns
+ // make sure one char type is selected
+
+ 
+
 function generatePassword(){
-  var options = ["uppercase" , "lowercase" , "special"];
+
+  var password = "";
   var length = [8-128];
   var charset = ["abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()"];
-  var password = "";
+  var options = ["Yes" + "No"];
 
-  var userChoice = window.prompt("Choose length of password between 8-128 characters.")
+  //first prompt
+  var userChoice = window.prompt("Choose password length.")
   //write test conditions for length in first userChoice question, then it displays user choice
 
-if (userChoice.length) {
-    window.alert("You've chosen" + userChoice +".")
+  if (userChoice ) {
+    //validate 
   } else if (!userChoice.length) {
     window.alert("Try again!");
+    //keep return here to make user redo their inputs correctly
+    return;
   } 
+  
+  //second prompt
+  var userChoice2 = window.prompt("Include special characters?")
+  //write test conditions for user input choice2 display user choice
 
-  var userChoice2 = window.prompt("Which character types included in password? ex. uppercase, lowercase, special")
-//write test conditions for user input choice2 display user choice
+  if (userChoice2.options === true) {
+    //validate selection
+  } else if (!userChoice2.options) {
+    //validate deselection 
+  }
+  
+  //third prompt
+  var userChoice3 = window.prompt("Include numerical characters?")
 
-if (userChoice2.options) {
-    window.alert("You've chosen" + userChoice2 + ".")
-  } else if (userChoice2.options[1]) {
-    window.alert("You've chosen" + userChoice2 + ".")
-  } else if (userChoice2.options[2]) {
-    window.alert("You've chosen" + userChoice2 + ".")
-  } 
+  if (userChoice3.options === true) {
+    //validate
+  } else if (!userChoice3.options) {
+    //deselect
+  }
 
-for (var i = 0, n = charset.length; i<length; ++i) {
+  //fourth prompt
+  var userChoice4 = window.prompt("Include lowercase characters?")
+
+  if (userChoice4.options === true) {
+    //validate input 
+  } else if (!userChoice4.options) {
+    //validate deselection
+  }
+
+  //fifth prompt
+  var userChoice5 = window.prompt("Include uppercase characters?")
+  
+  if (userChoice5.options) {
+    //validate input
+  } else if (!userChoice5.options) {
+    //validate deselection
+  }
+
+
+  for (var i = 0, n = charset.length; i<length; ++i) {
     password += charset.charAt(Math.floor(Math.random() * n));
   }
+  
   return password;  
 
 };
+
 
 //make it display
 document.getElementById("password").value = password;
@@ -47,6 +87,7 @@ document.getElementById("password").value = password;
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
+//define generatePassword
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -56,3 +97,14 @@ function writePassword() {
 };
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
+
+
+
+
+
+
+
+
+

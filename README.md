@@ -9,3 +9,6 @@ This assignment got us writing javascript code which made an interactive, passwo
 2. https://stackoverflow.com/questions/1497481/javascript-password-generator 
 
 3. https://git.bootcampcontent.com/Washington-University-in-St.-Louis/WUSTL-VIRT-FSF-PT-01-2023-U-LOLC 
+
+4. https://www.youtube.com/watch?v=x4HUaiazDes 
+
