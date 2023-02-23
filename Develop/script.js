@@ -19,7 +19,7 @@
  
   var userChoice = [8];
   var userChoice2 = ["!","@","#","$","%","^","&","*","(",")","-","_","=","+"];
-  var userChoice3 = ["1","2","3","4","5","6","7","8","9","0"]
+  var userChoice3 = ["1","2","3","4","5","6","7","8","9","0"];
   var userChoice4 = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
   var userChoice5 = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
@@ -77,15 +77,15 @@ function writePassword() {
 
   //randomNum to store that random generated value
 
-function generatePassword(){
-  var password = "";
-  for (var i = 0, i = charset.userChoice; i<userChoice; ++i) {
-    var randomNum = Math.floor(Math.random() * charset.userChoice);
-    password = password + charset[randomNum]; 
-  }
+//function generatePassword(){
+  //var password = "";
+ // for (var i = 0, i = charset.userChoice; i<userChoice; ++i) {
+ //   var randomNum = Math.floor(Math.random() * charset.userChoice);
+ //   password = password + charset[randomNum]; 
+ // }
   
-  return password;
-};
+//  return password;
+//};
 
 //make it display
 document.getElementById("password").value = passwordText;
