@@ -13,3 +13,5 @@ This assignment got us writing javascript code which made an interactive, passwo
 4. https://www.youtube.com/watch?v=x4HUaiazDes 
 
 5. https://www.youtube.com/watch?v=v2jfGo7ztm8 - this source walked me through every part of the script.js(scr.js for this repo)
+
+6. https://github.com/coding-boot-camp/friendly-parakeet - starter code!
